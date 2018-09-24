@@ -5,7 +5,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <Text style ={styles.text}>Kikou lol</Text>
       </View>
     );
   }
@@ -13,9 +13,13 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#fff',
+    flex: 1, 
+    backgroundColor: "green",
     alignItems: 'center',
     justifyContent: 'center',
   },
+
+  text :{
+    color: "white",
+  }
 });
