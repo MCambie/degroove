@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 import NewUser from './components/NewUser';
 import app from './components/firebaseAuth';
-import base from './components/firestore';
 import 'firebase/auth';
 
 export default class App extends React.Component {
@@ -26,26 +25,24 @@ export default class App extends React.Component {
   }
 
   submitNewUser() {
-    app.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).catch(function(error) {
+    var emailTrue = this.state.email;
+    var passwordTrue = this.state.password;
+    app.auth().createUserWithEmailAndPassword(emailTrue, passwordTrue).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
+      console.log('check ' + error.message);
+      this.setState({error: errorMessage});
     });
-  }
-
-  testfunction() {
-    base.addToCollection('users', {me: "rtuy"})
-    .then(() => {
-      //document is added to the collection
-    }).catch(err => {
-    //handle error
-    });
-    this.submitNewUser();
   }
 
   submitExistingUser() {
-    app.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch(function(error) {
+    var emailTrue = this.state.email;
+    var passwordTrue = this.state.password;
+    app.auth().signInWithEmailAndPassword(emailTrue, passwordTrue).catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
+      console.log('check2 ' + error.message);
+      this.setState({error: errorMessage});
     });
   }
 
@@ -77,14 +74,14 @@ export default class App extends React.Component {
         <NewUser text={this.state.email} function={(input)=>this.emailinputChange(input)}/>
         <NewUser text={this.state.password} function={(input)=>this.passwordinputChange(input)}/>
         <Button
-          onPress={()=>this.submitExistingUser()}
-          title="Sign in"
+          onPress={()=>this.submitNewUser()}
+          title="Sign Up"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
         />
         <Button
-          onPress={()=>this.testfunction()}
-          title="signup"
+          onPress={()=>this.submitExistingUser()}
+          title="Sign in"
           color="#841584"
           accessibilityLabel="Learn more about this purple button"
         />

@@ -1,6 +1,5 @@
 import firebase from 'firebase';
-import Rebase from 're-base';
-require('firebase/firestore');
+
 
 const app = firebase.initializeApp({
   apiKey: "AIzaSyADbWGkRM5TWjiXT8jDsCR9JYOE67FycsA",
@@ -10,11 +9,5 @@ const app = firebase.initializeApp({
   storageBucket: "degroove-b0aea.appspot.com",
   messagingSenderId: "1084937618713"
 });
-
-// const firestore = app.firestore();
-// const settings = { timestampsInSnapshots: true };
-// firestore.settings(settings);
-//
-// const base = Rebase.createClass(firestore);
 
 export default app;
