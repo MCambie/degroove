@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, ScrollView } from 'react-native';
-import {Avatar, Header, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
+import {Button, Avatar, Header, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
 import HeaderDGR from './components/Header';
 import LoginDGR from './components/Login';
 import ProjectDescription from './components/ProjectDescription';

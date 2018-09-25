@@ -1,6 +1,6 @@
 import React from 'react';
 import {View,Text, StyleSheet} from 'react-native';
-import {Avatar, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
+import {Button, Avatar, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
 
 class LoginDGR extends React.Component{
 	render(){
@@ -12,16 +12,25 @@ class LoginDGR extends React.Component{
            onPress={() => console.log("Works!")}
            activeOpacity={0.7}
        />
-       <FormLabel>Login</FormLabel>
+       <FormLabel style={{fontSize: '50'}} >Login</FormLabel>
        <FormInput />
        {/* if error display :*/}
        <FormValidationMessage>{'This field is required'}</FormValidationMessage>
-       <FormLabel>Password</FormLabel>
+       <FormLabel>Password </FormLabel>
        <FormInput />
        {/* if error display :*/}
        <FormValidationMessage>{'This field is required'}</FormValidationMessage>
-
-			</View>
+       <View style={styles.button}>
+           <Button
+            backgroundColor='rgb(79, 188, 132)'
+            small
+            title='Sign in' />
+           <Button
+            backgroundColor='rgb(79, 188, 132)'
+            small
+            title='Sign up' />
+        </View>
+      </View>
 			)
 	}
 }
@@ -32,6 +41,16 @@ const styles = StyleSheet.create({
     flex: 1,
     marginTop: 50,
     backgroundColor: 'rgb(240,240,240)',
-    alignItems: 'center',
+    alignItems: 'center'
+  },
+  font: {
+    fontSize: 50
+  },
+  button:{
+    flexDirection: 'row',
+
+  },
+  green:{
+
   }
 });
