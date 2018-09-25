@@ -1,6 +1,6 @@
 import React from 'react';
-import {View,Text,Image,StyleSheet} from 'react-native';
-import { Card, Button } from 'react-native-elements'
+import {View,Text,Image,StyleSheet,Button} from 'react-native';
+import { Card } from 'react-native-elements'
 class ProjectDetails extends React.Component{
 	render(){
 		return(
@@ -35,7 +35,7 @@ class ProjectDetails extends React.Component{
 }
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+    //   flex: 1,
       backgroundColor: '#fff',
       flexDirection: "row",
       padding: 10,
