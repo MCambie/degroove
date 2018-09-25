@@ -9,6 +9,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "accordion-collapse-react-native": "^0.1.6",
     "expo": "^30.0.1",
     "firebase": "^5.5.1",
     "re-base": "^4.0.0",
