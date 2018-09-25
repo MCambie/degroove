@@ -1,8 +1,7 @@
 import React from 'react';
 import {View,Text,Image, StyleSheet} from 'react-native';
-import { FormLabel, FormInput, FormValidationMessage, CheckBox, SearchBar } from 'react-native-elements'
+import {Card, FormLabel, FormInput, FormValidationMessage, CheckBox, SearchBar, Button } from 'react-native-elements'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
-import { Card, Button } from 'react-native-elements'
 import ProjectDetails from './ProjectDetails';
 
 
@@ -47,6 +46,10 @@ class SignUp extends React.Component{
                     <FormValidationMessage>{'This field is required'}</FormValidationMessage>
 
                     <FormLabel>Email</FormLabel>
+                    <FormInput/>
+                    <FormValidationMessage>{'This field is required'}</FormValidationMessage>
+
+                    <FormLabel>Password</FormLabel>
                     <FormInput/>
                     <FormValidationMessage>{'This field is required'}</FormValidationMessage>
 
@@ -126,8 +129,16 @@ class SignUp extends React.Component{
                         placeholder='Search' 
                     />
                     <FormValidationMessage>{'This field is required'}</FormValidationMessage> 
-                </View>  
-            </View>
+                </View> 
+
+                <Button
+                 title='button'
+                 styleButton = {{
+                   width : 500
+                }}
+               
+                /> 
+            </View>      
 		);
 	}
 }
@@ -139,7 +150,6 @@ const styles = StyleSheet.create({
     },
     title : {
        fontSize : 20
-
-    }
+    },
 })
 export default SignUp;
