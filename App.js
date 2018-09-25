@@ -8,7 +8,7 @@ export default class App extends React.Component {
     return (
       <ScrollView style={styles.container}>
         {/* <ProjectDescription></ProjectDescription> */}
-        <ProjectsList></ProjectsList>
+        {/* <ProjectsList></ProjectsList> */}
       </ScrollView>
     );
   }
