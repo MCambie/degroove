@@ -5,7 +5,7 @@ class UpdateProfileButton extends React.Component{
 	render(){
 		return(
 			 <View style={styles.container}>
-                <Button style={styles.click} title='Modifier le profil' backgroundColor="rgb(79,188,132)" buttonStyle={{width: 200,margin: 30,}} onPress={this.props.function}/>
+                <Button style={styles.click} title='Update profile' backgroundColor="rgb(79,188,132)" buttonStyle={{width: 200,margin: 30,}} onPress={this.props.function}/>
 			</View>
 			)
 	}

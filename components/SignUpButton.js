@@ -5,7 +5,7 @@ class SignUpButton extends React.Component{
 	render(){
 		return(
 			 <View style={styles.container}>
-                <Button style={styles.click} title="S'enregistrer" backgroundColor="rgb(79,188,132)" buttonStyle={{width: 200,margin: 30,}} onPress={this.props.function}/>
+                <Button style={styles.click} title="Sign up" backgroundColor="rgb(79,188,132)" buttonStyle={{width: 200,margin: 30,}} onPress={this.props.function}/>
 			</View>
 			)
 	}
