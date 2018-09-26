@@ -16,11 +16,11 @@ class SignUp extends React.Component{
             checkBox3 : false,
             checkBox4 : false,
             checkBox5 : false,
-            checkBox6 : false, 
+            checkBox6 : false,
             checkBox7 : false,
             checkBox8 : false,
             checkBox9 : false,
-            checkBox10 : false, 
+            checkBox10 : false,
             checkBox11 : false,
             collapsed : false, 
         }
@@ -48,21 +48,21 @@ class SignUp extends React.Component{
                             <Label >          
                             First Name</Label>
                             <Input />
-                        </Item> 
+                        </Item>
 
                         <Item floatingLabel>
                         <Icon name ='person'/>
                             <Label> 
                             Last Name</Label>
                             <Input />
-                        </Item> 
+                        </Item>
 
                         <Item floatingLabel>
                         <Icon name='mail'/>
                             <Label>
                            Email</Label>
                             <Input />
-                        </Item> 
+                        </Item>
 
                         <Item floatingLabel>
                         <Icon name ='lock'/>

@@ -7,6 +7,9 @@ class LoginDGR extends React.Component{
 	render(){
 		return(
 			 <View style={styles.login}>
+				 <Text style={styles.header}>
+					 Login
+			 	 </Text>
          <Image
 					style={{width: 150, height: 150, borderRadius : 75}}
 					source={require('../assets/logo.png')}
@@ -16,7 +19,7 @@ class LoginDGR extends React.Component{
             <Icon name='mail'/> 
             <Label>Email</Label>
             <Input/>
-          </Item> 
+          </Item>
 
           <Item floatingLabel style = {styles.item}>
           <Icon name ='lock'/>
@@ -30,7 +33,7 @@ class LoginDGR extends React.Component{
               title='Sign in' />
 
              <View style = {styles.lineStyle} />
-       
+
              <Text style ={styles.signUp}>
               You don't have an account ?
              </Text>
@@ -71,8 +74,14 @@ const styles = StyleSheet.create({
 },
 
   signUp : {
-    textAlign : 'center', 
+    textAlign : 'center',
     marginTop : 30
-  }
+  },
+	header: {
+			flex: 1,
+			width: '100%',
+			backgroundColor: 'rgb(79, 188, 132)',
+			color: 'white'
+			}
 
 });
