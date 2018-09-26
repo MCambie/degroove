@@ -7,9 +7,14 @@ class LoginDGR extends React.Component{
 	render(){
 		return(
 			 <View style={styles.login}>
-				 <Text style={styles.header}>
-					 Login
-			 	 </Text>
+				 <View style={styles.header}>
+					 <Text>
+						 Project List
+					 </Text>
+					 <Button
+					 icon={{name: 'exit_to_app'}}
+					 />
+				 </View>
          <Image
 					style={{width: 150, height: 150, borderRadius : 75}}
 					source={require('../assets/logo.png')}

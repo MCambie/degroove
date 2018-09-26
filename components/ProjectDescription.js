@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,Image} from 'react-native';
+import {View,Text,Image, StyleSheet} from 'react-native';
 import { Card, Button } from 'react-native-elements'
 import ProjectDetails from './ProjectDetails';
 import FooterDGR from './Footer';
@@ -7,9 +7,14 @@ class ProjectDescription extends React.Component{
 	render(){
 		return(
 			 <View>
-				 				<Text style={styles.header}>
-									Project Description
-			 					</Text>
+								 <View style={styles.header}>
+									 <Text>
+										 Project List
+									 </Text>
+									 <Button
+									 icon={{name: 'exit_to_app'}}
+									 />
+								 </View>
                 <ProjectDetails></ProjectDetails>
                 <Text style={{marginBottom: 10}}>
                     Mission description.
