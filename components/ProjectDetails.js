@@ -35,7 +35,7 @@ class ProjectDetails extends React.Component{
 }
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
+    //   flex: 1,
       backgroundColor: '#fff',
       flexDirection: "row",
       padding: 10,

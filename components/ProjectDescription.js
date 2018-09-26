@@ -1,6 +1,6 @@
 import React from 'react';
-import {View,Text,Image} from 'react-native';
-import { Card, Button } from 'react-native-elements'
+import {View,Text,Image,Button,ScrollView} from 'react-native';
+import { Card } from 'react-native-elements'
 import ProjectDetails from './ProjectDetails';
 import FooterDGR from './Footer';
 class ProjectDescription extends React.Component{

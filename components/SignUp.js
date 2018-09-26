@@ -4,6 +4,7 @@ import {Card, SearchBar, Button, CheckBox} from 'react-native-elements'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import {Input, Label, Form, Item, ListItem, Body, Icon} from 'native-base';
 import ProjectDetails from './ProjectDetails';
+import HeaderFictif from './HeaderFictif';
 
 
 
