@@ -3,6 +3,7 @@ import {View,Text,Image, StyleSheet} from 'react-native';
 import {Card, FormLabel, FormInput, FormValidationMessage, CheckBox, SearchBar, Button } from 'react-native-elements'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import ProjectDetails from './ProjectDetails';
+import HeaderFictif from './HeaderFictif';
 
 
 
@@ -27,12 +28,13 @@ class SignUp extends React.Component{
 	render(){
 		return(
             <View style = {styles.container}>
+                <HeaderFictif navigation={this.props.navigation}/>
                 <Image
 					style={{width: 150, height: 150, borderRadius : 75}}
 					source={require('../assets/logo.png')}
 				/>
                 <Text style={styles.title}>
-                    Change profile picture
+                    {this.props.title}
                 </Text>
                 
                 <View style = {styles.form}>
@@ -163,7 +165,7 @@ const styles = StyleSheet.create({
         // transform: "translateY(40px)",
         width: "90%",
         position: "absolute",
-        // top: 240,
+        top: 240,
         // transform: [{ translateY: 40 }],
         // transition: [{ transform: 1}],
     }

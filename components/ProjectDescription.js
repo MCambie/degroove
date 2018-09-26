@@ -2,22 +2,15 @@ import React from 'react';
 import {View,Text,Image,Button,ScrollView} from 'react-native';
 import { Card } from 'react-native-elements'
 import ProjectDetails from './ProjectDetails';
+import HeaderFictif from './HeaderFictif';
 class ProjectDescription extends React.Component{
 	render(){
-		return(
+        const { navigation } = this.props;
+        const itemId = navigation.getParam('itemId', 'NO-ID');
+        return(
 			 <ScrollView>
-                <Button
-                    title="Home"
-                    onPress={() => this.props.navigation.navigate('Home')}
-                />
-                <Button
-                    title="Details"
-                    onPress={() => this.props.navigation.navigate('Details')}
-                />
-                <Button
-                    title="List"
-                    onPress={() => this.props.navigation.navigate('ProjectsList')}
-                />
+                <HeaderFictif navigation={this.props.navigation}/>
+                <Text>itemId: {JSON.stringify(itemId)}</Text>
                 {/* <Button
                     title="Go to Home"
                     onPress={() => this.props.navigation.navigate('Home')}

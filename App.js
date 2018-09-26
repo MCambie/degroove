@@ -14,6 +14,15 @@ import DetailsScreen from './components/DetailsScreen';
 import SignUp from './components/SignUp'
 
 export default class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state={test:true};
+  }
+  // componentWillMount() {
+  //     this.setState({test: true});
+  // }
+
+  
   render() {
     return (
       // <ScrollView style={styles.container}>
@@ -23,7 +32,7 @@ export default class App extends React.Component {
       //   <LoginDGR/>
       //   <ProjectsList></ProjectsList> */}
       //   {/* <Text>Test</Text> */}
-        // <RootStack/>
+        <RootStack/>
       //   {/* <HomeScreen/>
       //   <DetailsScreen/> */}
       // </ScrollView>
@@ -32,27 +41,36 @@ export default class App extends React.Component {
       // </ScrollView>
       // );
 
-      <ScrollView style={styles.container}>
-        <View style={styles.header}>
-        <HeaderDGR/>
-        </View>
-        <LoginDGR/>
-        {/* <ProjectsList></ProjectsList> */}
-        <SignUp/>
-      </ScrollView>
+      // <ScrollView style={styles.container}>
+      //   <View style={styles.header}>
+      //   <HeaderDGR/>
+      //   </View>
+      //   <LoginDGR/>
+      //   {/* <ProjectsList></ProjectsList> */}
+      //   <SignUp/>
+      // </ScrollView>
     );
 
     }
   }
+  var test = new App().state.test;
 const RootStack = createStackNavigator(
     {
       Home: HomeScreen,
       Details: DetailsScreen,
       ProjectDescription: ProjectDescription,
       ProjectsList: ProjectsList,
+      Test: test ? DetailsScreen : Test,
+      Profile: {
+        screen: SignUp,
+        navigationOptions: ({ navigation }) => ({
+          // title: `${this.state.test}`,
+          title: this.state.test,
+        }),
+      },
     },
     {
-      initialRouteName: 'Home',
+      initialRouteName: 'Test',
     }
 );
 
