@@ -7,6 +7,9 @@ class LoginDGR extends React.Component{
 	render(){
 		return(
 			 <View style={styles.login}>
+				 <Text style={styles.header}>
+					 Login
+			 	 </Text>
          <Image
 					style={{width: 150, height: 150, borderRadius : 75}}
 					source={require('../assets/logo.png')}
@@ -72,6 +75,12 @@ const styles = StyleSheet.create({
   signUp : {
     textAlign : 'center',
     marginTop : 30
-  }
+  },
+	header: {
+			flex: 1,
+			width: '100%',
+			backgroundColor: 'rgb(79, 188, 132)',
+			color: 'white'
+			}
 
 });

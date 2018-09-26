@@ -1,11 +1,11 @@
 import React from 'react';
 import {View,Text,Image,StyleSheet} from 'react-native';
-import { Card, Button } from 'react-native-elements'
+import { Card, Button } from 'react-native-elements';
 class ProjectDetails extends React.Component{
 	render(){
 		return(
 			 <View style={styles.container}>
-                {/* <Card 
+                {/* <Card
                 // lexDirection="row"
                 containerStyle={{backgroundColor:"pink"}}
                 wrapperStyle={{backgroundColor:"purple"}}
@@ -66,5 +66,5 @@ const styles = StyleSheet.create({
         alignItems: "center",
     }
 })
-  
+
 export default ProjectDetails;

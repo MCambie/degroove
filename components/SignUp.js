@@ -16,11 +16,11 @@ class SignUp extends React.Component{
             checkBox3 : false,
             checkBox4 : false,
             checkBox5 : false,
-            checkBox6 : false, 
+            checkBox6 : false,
             checkBox7 : false,
             checkBox8 : false,
             checkBox9 : false,
-            checkBox10 : false, 
+            checkBox10 : false,
             checkBox11 : false,
             collapsed : false
         }
@@ -36,28 +36,28 @@ class SignUp extends React.Component{
                 <Text style={styles.title}>
                     Change profile picture
                 </Text>
-                
+
                 <View style = {styles.form}>
                     <Form>
                         <Item floatingLabel>
                             <Label>First Name</Label>
                             <Input />
-                        </Item> 
+                        </Item>
 
                         <Item floatingLabel>
                             <Label>Last Name</Label>
                             <Input />
-                        </Item> 
+                        </Item>
 
                         <Item floatingLabel>
                             <Label>Email</Label>
                             <Input />
-                        </Item> 
+                        </Item>
 
                         <Item floatingLabel>
                             <Label>Password</Label>
                             <Input />
-                        </Item> 
+                        </Item>
 
                         <FormLabel>Region</FormLabel>
                             <Collapse isCollapsed = {this.state.collapsed}>
@@ -66,11 +66,11 @@ class SignUp extends React.Component{
                                         <Button
                                             title= "Choose"
                                             onPress = {() => this.setState({collapsed:!this.state.collapsed                                                  })}
-                                        /> 
+                                        />
                                     </View>
                                  </CollapseHeader>
                                  <CollapseBody>
-                                    <CheckBox 
+                                    <CheckBox
                                         title = 'Antwerp'
                                         checked = {this.state.checkBox1}
                                         onPress={() => this.setState({checkBox1:!this.state.checkBox1})}
@@ -121,45 +121,45 @@ class SignUp extends React.Component{
                                         title = 'Namur'
                                         checked = {this.state.checkBox9}
                                         onPress={() => this.setState({checkBox9:!this.state.checkBox9})}
-                                    />    
+                                    />
                                     <CheckBox
                                         title = 'Walloon Brabant'
                                         checked = {this.state.checkBox10}
                                         onPress={() => this.setState({checkBox10:!this.state.checkBox10})}
-                                    />                
+                                    />
                                 </CollapseBody>
                             </Collapse>
                     </Form>
-                
 
-                    {/* 
+
+                    {/*
 
                     >
-                    
+
                     <FormLabel>Skills</FormLabel>
                     <SearchBar
                         lightTheme
                         platform="android"
-                        placeholder='Search' 
+                        placeholder='Search'
                     />
                     <FormValidationMessage>{'This field is required'}</FormValidationMessage>  */}
-                </View> 
+                </View>
 
                 <Button
                  title='Create an account'
-                 backgroundColor = 'rgb(79, 188, 132)'  
+                 backgroundColor = 'rgb(79, 188, 132)'
                  style = {{
                     width : 200,
-                 }}         
-                /> 
-            </View>      
+                 }}
+                />
+            </View>
 		);
 	}
 }
 
 const styles = StyleSheet.create({
     container :{
-        flex : 1, 
+        flex : 1,
         marginBottom : 400
     //    alignItems : "center"
     },
