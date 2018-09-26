@@ -1,7 +1,7 @@
 import React from 'react';
 import {View,Text, StyleSheet, Image} from 'react-native';
 import {Button} from 'react-native-elements';
-import {Input, Label, Item} from 'native-base';
+import {Input, Label, Item, Icon} from 'native-base';
 
 class LoginDGR extends React.Component{
 	render(){
@@ -21,19 +21,20 @@ class LoginDGR extends React.Component{
 				/>
 
           <Item floatingLabel style = {styles.item}>
+            <Icon name='mail'/> 
             <Label>Email</Label>
             <Input/>
           </Item>
 
           <Item floatingLabel style = {styles.item}>
+          <Icon name ='lock'/>
               <Label>Password</Label>
               <Input />
-          </Item>
-
-        <View style={styles.button}>
+          </Item> 
+  
+        <View>
             <Button style={styles.click}
               backgroundColor='rgb(79, 188, 132)'
-              small
               title='Sign in' />
 
              <View style = {styles.lineStyle} />

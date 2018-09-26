@@ -1,7 +1,6 @@
 import React from 'react';
-import {View,Text,Image,StyleSheet,Icon} from 'react-native';
-import { Card, Button } from 'react-native-elements';
-import {  } from 'native-base';
+import {View,Text,Image,StyleSheet,Button,ScrollView,TouchableOpacity} from 'react-native';
+import { Card } from 'react-native-elements'
 import ProjectDetails from './ProjectDetails';
 import FooterDGR from './Footer';
 class ProjectDescription extends React.Component{
@@ -18,8 +17,13 @@ class ProjectDescription extends React.Component{
 									/>
 								</View>
                 <ProjectDetails style={styles.container}></ProjectDetails>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ProjectDescription', {itemId: 2})}>
                 <ProjectDetails style={styles.container}></ProjectDetails>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('ProjectDescription', {itemId: 3})}>
                 <ProjectDetails style={styles.container}></ProjectDetails>
+                </TouchableOpacity>
                 {/* <Text style={{marginBottom: 10}}>
                     Mission description.
                 </Text>
