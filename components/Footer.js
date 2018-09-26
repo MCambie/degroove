@@ -6,24 +6,26 @@ import { Container, Footer, FooterTab, Icon } from 'native-base';
 class FooterDGR extends React.Component{
 	render(){
 		return(
-      <Container style={styles.container}>
+      // <Container style={styles.container}>
               <Footer >
                 <FooterTab style={styles.footer}>
                   <Button vertical title='Profil' style={styles.button}
                   backgroundColor='rgb(79, 188, 132)'
                   underlayColor="black"
-                  icon={{name: 'person'}}>
+                  icon={{name: 'person'}}
+                  onPress={() => this.props.navigation.navigate('Profile')}
+                  >
                   </Button>
                   <Text style={styles.text}></Text>
                   <Button vertical title='Projects' style={styles.button}
                   backgroundColor='rgb(79, 188, 132)'
                   rightIcon={{name: 'book'}}
-
+                  onPress={() => this.props.navigation.navigate('ProjectsList')}
                   >
                   </Button>
                 </FooterTab>
               </Footer>
-            </Container>
+            // </Container>
 			)
 	}
 }
@@ -31,11 +33,13 @@ export default FooterDGR;
 
 const styles = StyleSheet.create({
       container: {
-        justifyContent: 'flex-end'
+        // justifyContent: 'flex-end'
       },
       footer :{
         backgroundColor: 'rgb(79, 188, 132)',
         alignItems: 'center',
+        // position: "absolute",
+        // bottom: 0,
       },
       button :{
         flex: 2,

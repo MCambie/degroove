@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {View,Text,Image, StyleSheet,ScrollView, TouchableOpacity} from 'react-native';
 import {Card, SearchBar, Button, CheckBox} from 'react-native-elements'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import {Input, Label, Form, Item, ListItem, Body, Icon} from 'native-base';
@@ -29,7 +29,7 @@ class SignUp extends React.Component{
 
 	render(){
 		return(
-            <View style = {styles.container}>
+            <ScrollView style = {styles.container}>
                 <View style = {styles.image}>
                     <Image 
                         style={{width: 150, height: 150, borderRadius : 75}}
@@ -167,7 +167,7 @@ class SignUp extends React.Component{
                     </View>
                     
                 </View>   
-            </View>   
+            </ScrollView>   
 		);
 	}
 }
@@ -177,7 +177,9 @@ const styles = StyleSheet.create({
         flex : 1, 
         padding : 30,
     },
-
+    form: {
+        marginBottom: 80,
+    },
     image: {
         alignItems: 'center'
     },

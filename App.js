@@ -16,7 +16,7 @@ import SignUp from './components/SignUp'
 export default class App extends React.Component {
   constructor(props){
     super(props);
-    this.state={test:false};
+    this.state={test:true};
   }
   
   render() {
@@ -33,7 +33,7 @@ const RootStack = createStackNavigator(
       Details: DetailsScreen,
       ProjectDescription: ProjectDescription,
       ProjectsList: ProjectsList,
-      Test: test ? DetailsScreen : SignUp,
+      Test: test ? ProjectsList : SignUp,
       Profile: {
         screen: SignUp,
         navigationOptions: ({ navigation }) => ({
