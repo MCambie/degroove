@@ -12,16 +12,24 @@ import ProjectsList from './components/ProjectsList';
 import HomeScreen from './components/HomeScreen';
 import DetailsScreen from './components/DetailsScreen';
 import SignUp from './components/SignUp'
+// import SideBar from './components/SideBar'
 
 export default class App extends React.Component {
   constructor(props){
     super(props);
-    this.state={test:true};
+    this.state={test:false};
   }
   // componentWillMount() {
   //     this.setState({test: true});
   // }
-
+  // async componentWillMount() {
+  //   await Expo.Font.loadAsync({
+  //   'Roboto': require('native-base/Fonts/Roboto.ttf'),
+  //   'Roboto_medium': require('native-base/Fonts/Roboto_medium.ttf'),
+  //   'Ionicons': require('@expo/vector-icons/fonts/Ionicons.ttf'),
+  //  });
+  // }
+  
   
   render() {
     return (
@@ -60,11 +68,10 @@ const RootStack = createStackNavigator(
       Details: DetailsScreen,
       ProjectDescription: ProjectDescription,
       ProjectsList: ProjectsList,
-      Test: test ? DetailsScreen : Test,
+      Test: test ? DetailsScreen : SignUp,
       Profile: {
         screen: SignUp,
         navigationOptions: ({ navigation }) => ({
-          // title: `${this.state.test}`,
           title: this.state.test,
         }),
       },

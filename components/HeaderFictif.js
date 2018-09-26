@@ -1,6 +1,7 @@
 import React from 'react';
-import {View,Text,Button} from 'react-native';
-import {Header} from 'react-native-elements';
+import {View,Text} from 'react-native';
+import {Header,Button} from 'react-native-elements';
+import { Icon } from "native-base";
 
 class HeaderFictif extends React.Component{
 	render(){
@@ -14,6 +15,15 @@ class HeaderFictif extends React.Component{
                     title="Profile"
                     onPress={() => this.props.navigation.navigate('Profile')}
                 />
+                <Button
+                    title="Test nav"
+                    onPress={() => this.props.navigation.navigate('Home')}
+                />
+                {/* <Button
+                  transparent
+                  onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+                  <Icon name="menu" />
+                </Button> */}
 			</View>
 			)
 	}
