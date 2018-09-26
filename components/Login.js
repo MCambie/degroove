@@ -15,13 +15,13 @@ class LoginDGR extends React.Component{
           <Item floatingLabel style = {styles.item}>
             <Label>Email</Label>
             <Input/>
-          </Item> 
+          </Item>
 
           <Item floatingLabel style = {styles.item}>
               <Label>Password</Label>
               <Input />
-          </Item> 
-  
+          </Item>
+
         <View style={styles.button}>
             <Button style={styles.click}
               backgroundColor='rgb(79, 188, 132)'
@@ -29,7 +29,7 @@ class LoginDGR extends React.Component{
               title='Sign in' />
 
              <View style = {styles.lineStyle} />
-       
+
              <Text style ={styles.signUp}>
               You don't have an account ?
              </Text>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
 },
 
   signUp : {
-    textAlign : 'center', 
+    textAlign : 'center',
     marginTop : 30
   }
 

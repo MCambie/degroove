@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import {Button, Avatar, Header, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
 import HeaderDGR from './components/Header';
 import LoginDGR from './components/Login';
+import FooterDGR from './components/Footer';
 import ProjectDescription from './components/ProjectDescription';
 import ProjectsList from './components/ProjectsList';
 import SignUp from './components/SignUp'
@@ -18,6 +19,7 @@ export default class App extends React.Component {
         <LoginDGR/>
         <ProjectsList></ProjectsList>
         <SignUp/>
+        <FooterDGR/>
       </ScrollView>
     );
 
