@@ -1,37 +1,8 @@
 import React from 'react';
 import {View,Text, StyleSheet} from 'react-native';
 import {Button, Avatar, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
-import app from './firebaseAuth';
-import base from './firestore';
-import 'firebase/auth';
 
 class LoginDGR extends React.Component{
-
-	constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      password: ''
-    };
-  }
-
-  emailinputChange(input) {
-    this.setState({email: input});
-  }
-
-  passwordinputChange(input) {
-    this.setState({password: input});
-  }
-
-  submitExistingUser() {
-    app.auth().signInWithEmailAndPassword(this.state.email, this.state.password).catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-			console.log(errorCode);
-			console.log(errorMessage);
-    });
-  }
-
 	render(){
 		return(
 			 <View style={styles.login}>
@@ -42,25 +13,22 @@ class LoginDGR extends React.Component{
            activeOpacity={0.7}
        />
        <FormLabel style={{fontSize: '50'}} >Login</FormLabel>
-       <FormInput placeholder = "email" onChangeText={(input)=>this.emailinputChange(input)}/>
+       <FormInput />
        {/* if error display :*/}
        <FormValidationMessage>{'This field is required'}</FormValidationMessage>
        <FormLabel>Password </FormLabel>
-       <FormInput onChangeText={(input)=>this.passwordinputChange(input)}/>
+       <FormInput />
        {/* if error display :*/}
        <FormValidationMessage>{'This field is required'}</FormValidationMessage>
        <View style={styles.button}>
            <Button
-						onPress={()=>this.submitExistingUser()}
             backgroundColor='rgb(79, 188, 132)'
             small
             title='Sign in' />
            <Button
             backgroundColor='rgb(79, 188, 132)'
             small
-            title='Create a new account'
-						onPress={() => this.props.navigation.navigate('Signup')}
-						/>
+            title='Sign up' />
         </View>
       </View>
 			)

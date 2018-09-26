@@ -16,7 +16,6 @@ export default class App extends React.Component {
     };
   }
 
-
   emailinputChange(input) {
     this.setState({email: input});
   }

@@ -16,6 +16,7 @@
     "re-base": "^4.0.0",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
+    "react-native-base": "^1.1.0",
     "react-native-elements": "^0.19.1",
     "react-native-firebase": "^5.0.0-rc4",
     "react-native-vector-icons": "^5.0.0",
