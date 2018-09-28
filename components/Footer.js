@@ -13,7 +13,7 @@ class FooterDGR extends React.Component{
                   backgroundColor='rgb(79, 188, 132)'
                   underlayColor="black"
                   icon={{name: 'person'}}
-                  onPress={() => this.props.navigation.navigate('Profile')}
+                  onPress={() => this.props.navigation.navigate('SignUp')}
                   >
                   </Button>
                   <Text style={styles.text}></Text>
