@@ -4,9 +4,10 @@ import {Button} from 'react-native-elements';
 import { Container, Footer, FooterTab, Icon } from 'native-base';
 
 class FooterDGR extends React.Component{
+	static navigationOptions={header:null}
 	render(){
 		return(
-      // <Container style={styles.container}>
+      <Container style={styles.container}>
               <Footer >
                 <FooterTab style={styles.footer}>
                   <Button vertical title='Profil' style={styles.button}
@@ -25,7 +26,7 @@ class FooterDGR extends React.Component{
                   </Button>
                 </FooterTab>
               </Footer>
-            // </Container>
+            </Container>
 			)
 	}
 }
@@ -33,13 +34,11 @@ export default FooterDGR;
 
 const styles = StyleSheet.create({
       container: {
-        // justifyContent: 'flex-end'
+        justifyContent: 'flex-end'
       },
       footer :{
         backgroundColor: 'rgb(79, 188, 132)',
         alignItems: 'center',
-        // position: "absolute",
-        // bottom: 0,
       },
       button :{
         flex: 2,

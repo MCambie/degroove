@@ -1,6 +1,6 @@
 import React from 'react';
-import {View,Text,Image, StyleSheet,ScrollView} from 'react-native';
-import {Button, CheckBox} from 'react-native-elements'
+import {View,Text,Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {Card, SearchBar, Button, CheckBox} from 'react-native-elements'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import {Input, Label, Form, Item, ListItem, Body, Icon} from 'native-base';
 import ProjectDetails from './ProjectDetails';
@@ -218,9 +218,7 @@ const styles = StyleSheet.create({
         flex : 1,
         padding : 30,
     },
-    form: {
-        marginBottom: 80,
-    },
+
     image: {
         alignItems: 'center'
     },

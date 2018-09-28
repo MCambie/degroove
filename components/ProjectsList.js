@@ -66,12 +66,13 @@ class ProjectList extends React.Component{
 }
 
 const styles = StyleSheet.create({
-    header: {
-        // flex: 1,
-        width: '100%',
-        backgroundColor: 'rgb(79, 188, 132)',
-        color: 'white'
-    }
+    container: {
+    //   flex: 1,
+    //   backgroundColor: 'blue',
+    //   alignItems: 'center',
+    //   justifyContent: 'center',
+	},
+
 })
 
-export default ProjectList;
+export default ProjectDescription;

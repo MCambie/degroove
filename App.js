@@ -1,4 +1,7 @@
+// Fixes isomorphic-fetch
+GLOBAL.self = GLOBAL;
 import React from 'react';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 import LoginDGR from './components/Login';
 import ProjectDescription from './components/ProjectDescription';
@@ -58,3 +61,19 @@ export default class App extends React.Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: 25,
+    backgroundColor: 'rgb(240,240,240)',
+    //alignItems: 'center',
+  },
+  header: {
+    width: "100%",
+  },
+
+  text :{
+    color: "white",
+  }
+});

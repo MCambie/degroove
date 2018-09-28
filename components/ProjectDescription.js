@@ -17,6 +17,7 @@ class ProjectDescription extends React.Component{
 		const hours = navigation.getParam('hours', 'NO-ID');
 		return(
 			 <View>
+				 	<HeaderDGR pageName={"Project Description"}/>
 				 				<Text style={styles.header}>
 									Project Description
 			 					</Text>

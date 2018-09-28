@@ -2,6 +2,7 @@ import React from 'react';
 import {View,Text, StyleSheet, Image} from 'react-native';
 import {Button} from 'react-native-elements';
 import {Input, Label, Item, Icon} from 'native-base';
+import HeaderDGR from './Header';
 import app from './firebaseAuth';
 import 'firebase/auth';
 
@@ -35,29 +36,28 @@ class LoginDGR extends React.Component{
 	render(){
 		return(
 			 <View style={styles.login}>
-				 <Text style={styles.header}>
-					 Login
-			 	 </Text>
+				 <HeaderDGR pageName={"Login"}/>
          <Image
-					style={{width: 150, height: 150, borderRadius : 75}}
+					style={{width: 150, height: 150, borderRadius : 75, marginTop: 20}}
 					source={require('../assets/logo.png')}
 				/>
 
           <Item floatingLabel style = {styles.item}>
-            <Icon name='mail'/>
-            <Label>Email</Label>
-            <Input onChangeText={(input)=>this.emailinputChange(input)}/>
+						<Icon style={{color:"rgb(79, 188, 132)"}} name='mail'/>
+            <Label style={{color:"rgb(132, 134, 137)"}}>Email</Label>
+            <Input style={{color:"rgb(132, 134, 137)"}} keyboardType="email-address" onChangeText={(input)=>this.emailinputChange(input)}/>
           </Item>
 
           <Item floatingLabel style = {styles.item}>
-          <Icon name ='lock'/>
-              <Label>Password</Label>
-              <Input onChangeText={(input)=>this.passwordinputChange(input)}/>
+						<Icon style={{color:"rgb(79, 188, 132)"}} name ='lock'/>
+	              <Label style={{color:"rgb(132, 134, 137)"}}>Password</Label>
+              <Input style={{color:"rgb(132, 134, 137)"}} secureTextEntry={true} onChangeText={(input)=>this.passwordinputChange(input)}/>
           </Item>
 
         <View>
             <Button
 							style={styles.click}
+							buttonStyle={{marginTop: 30}}
 							onPress={()=>this.submitExistingUser()}
               backgroundColor='rgb(79, 188, 132)'
               title='Sign in'
@@ -86,14 +86,16 @@ export default LoginDGR;
 const styles = StyleSheet.create({
   login: {
     flex: 1,
-    // marginTop: 10,
-    padding : 30,
     backgroundColor: 'rgb(240,240,240)',
     alignItems: 'center'
   },
-
+ avatar: {
+	 marginTop: 10
+ },
  item:{
-  marginTop : 10
+  marginTop : 10,
+	marginLeft : 30,
+	marginRight: 30
  },
 
   click : {
@@ -112,7 +114,7 @@ const styles = StyleSheet.create({
     marginTop : 30
   },
 	header: {
-			// flex: 1,
+			flex: 1,
 			width: '100%',
 			backgroundColor: 'rgb(79, 188, 132)',
 			color: 'white'
