@@ -53,7 +53,7 @@ class SignUp extends React.Component{
       });
     }
 
-    testfunction() {
+    submitNewUserAndFirestoreDocument() {
       var email = this.state.email;
       var region = this.state.region;
       var skills = this.state.skill;
@@ -197,7 +197,7 @@ class SignUp extends React.Component{
                     <View style = {styles.button}>
                         <Button
                         title='Create an account'
-                        onPress={()=>this.testfunction()}
+                        onPress={()=>this.submitNewUserAndFirestoreDocument()}
                         backgroundColor = 'rgb(79, 188, 132)'
                         style = {{
                             width : 200,
