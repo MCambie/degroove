@@ -29,7 +29,7 @@ An inbox or alert system that tells you if you have the mission
 You can rate the project 
 
 ## Our response: 
-We created the app in React-Native, with 2 toolkit : react-native-elements and react-native-base.
+We created the app in React-Native.
 Guillaume and Thibault were in charge of the BackEnd (rooter, building, compilation, fonctions...)
 Géraldine and Marie were in charge of the FrontEnd (pages creations, design...)
 
@@ -52,4 +52,16 @@ Some printscreens :
 
 ## Our difficulties :
 - Coding in a very new language, we only had one day to get familiar with react-native before the challenge.
-- The time was dinitely our ennemy, we made this app in only 3 days and half.
+- The time was definitely our ennemy, we made this app in only 3 days and half.
+- Lack of documentation when implenting firestore into an app not developped with android studio.
+
+## Modules used:
+- [React-native](https://facebook.github.io/react-native/)
+- [Expo](https://expo.io/)
+- [React Navigation](https://reactnavigation.org/)
+- [Firebase](https://firebase.google.com/)
+- [Re-base](https://github.com/tylermcginnis/re-base)
+- [native-base](https://nativebase.io/)
+- [accordion-collapse-react-native](https://www.npmjs.com/package/accordion-collapse-react-native)
+- [react-native-elements](https://github.com/react-native-training/react-native-elements)
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
