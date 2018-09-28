@@ -5,13 +5,13 @@ import { StyleSheet, Text, View, ScrollView } from 'react-native';
 // import {Button, Avatar, Header, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
 import { createStackNavigator } from 'react-navigation';
 import HeaderDGR from './components/Header';
-import LoginDGR from './components/Login';
 import FooterDGR from './components/Footer';
 import ProjectDescription from './components/ProjectDescription';
 import ProjectsList from './components/ProjectsList';
 import HomeScreen from './components/HomeScreen';
 import DetailsScreen from './components/DetailsScreen';
 import SignUp from './components/SignUp'
+import LoginDGR from './components/Login'
 
 export default class App extends React.Component {
   constructor(props){
@@ -33,6 +33,8 @@ const RootStack = createStackNavigator(
       Details: DetailsScreen,
       ProjectDescription: ProjectDescription,
       ProjectsList: ProjectsList,
+      Login: LoginDGR,
+      Ok: SignUp,
       Test: test ? ProjectsList : SignUp,
       Profile: {
         screen: SignUp,
@@ -42,7 +44,7 @@ const RootStack = createStackNavigator(
       },
     },
     {
-      initialRouteName: 'Test',
+      initialRouteName: 'Ok',
     }
 );
 
