@@ -4,7 +4,7 @@ import {Card, SearchBar, Button, CheckBox} from 'react-native-elements'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import {Input, Label, Form, Item, ListItem, Body, Icon} from 'native-base';
 import ProjectDetails from './ProjectDetails';
-import HeaderFictif from './HeaderFictif';
+import HeaderDGR from './Header';
 
 
 
@@ -43,9 +43,10 @@ class SignUp extends React.Component{
 	render(){
 		return(
             <ScrollView style = {styles.container}>
+                <HeaderDGR pageName={"Profile"}/>
                 <View style = {styles.image}>
                     <Image 
-                        style={{width: 150, height: 150, borderRadius : 75}}
+                        style={{width: 150, height: 150, borderRadius : 75, marginTop: 20}}
                         source={require('../assets/logo.png')}
                     />
                     <Text style={styles.title}>
@@ -60,9 +61,12 @@ class SignUp extends React.Component{
               
                 
                 <View>
-                    <Form>
+                    <Text style={styles.required}>
+                        Please complete all the fields below.
+                    </Text>
+                    <Form style={{padding: 30}}>
                         <Item
-                        floatingLabel style={{ borderColor: this.state.backgroundColor }}>
+                        floatingLabel>
                         <Icon style={{color:"rgb(79, 188, 132)"}} name ='person'/>
                             <Label style={{color:"rgb(132, 134, 137)"}} >          
                             First Name</Label>
@@ -83,13 +87,13 @@ class SignUp extends React.Component{
                         <Icon style={{color:"rgb(79, 188, 132)"}} name='mail'/>
                             <Label style={{color:"rgb(132, 134, 137)"}}>
                            Email</Label>
-                            <Input style={{color:"rgb(132, 134, 137)"}} />
+                            <Input style={{color:"rgb(132, 134, 137)"}} keyboardType="email-address"/>
                         </Item>
 
                         <Item floatingLabel>
                         <Icon style={{color:"rgb(79, 188, 132)"}} name ='lock'/>
                             <Label style={{color:"rgb(132, 134, 137)"}}>Password</Label>
-                            <Input style={{color:"rgb(132, 134, 137)"}} />
+                            <Input style={{color:"rgb(132, 134, 137)"}} secureTextEntry={true}/>
                         </Item> 
 
                         <Item style = {styles.region}>
@@ -197,20 +201,29 @@ class SignUp extends React.Component{
 const styles = StyleSheet.create({
     container :{
         flex : 1, 
-        padding : 30,
+        // padding : 30,
         backgroundColor: "#fff",
+        // alignItems: 'center'
     },
     image: {
         alignItems: 'center'
     },
     
     title : {
-       fontSize : 20,   
-       marginTop: 10,
-       color:"rgb(132, 134, 137)",
-    },
-
-    profile : {
+        fontSize : 20,   
+        marginTop: 10,
+        color:"rgb(132, 134, 137)",
+     },
+ 
+     required : {
+        fontStyle : "italic",   
+        marginTop: 30,
+        color:"rgb(132, 134, 137)",
+        textAlign: "center",
+        marginBottom: -30,
+     },
+ 
+      profile : {
         // flex : 1, 
         flexDirection : "row",
         marginTop: 10,

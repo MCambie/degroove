@@ -4,12 +4,13 @@ import {Button} from 'react-native-elements';
 import { Container, Footer, FooterTab, Icon } from 'native-base';
 
 class FooterDGR extends React.Component{
+	static navigationOptions={header:null}
 	render(){
 		return(
       // <Container style={styles.container}>
               <Footer >
                 <FooterTab style={styles.footer}>
-                  <Button vertical title='Profil' style={styles.button}
+                  <Button vertical title='Profile' style={styles.button}
                   backgroundColor='rgb(79, 188, 132)'
                   underlayColor="black"
                   icon={{name: 'person'}}

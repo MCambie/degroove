@@ -2,33 +2,34 @@ import React from 'react';
 import {View,Text, StyleSheet, Image} from 'react-native';
 import {Button} from 'react-native-elements';
 import {Input, Label, Item, Icon} from 'native-base';
+import HeaderDGR from './Header';
 
 class LoginDGR extends React.Component{
+	static navigationOptions={header:null}
 	render(){
 		return(
 			 <View style={styles.login}>
-				 <Text style={styles.header}>
-					 Login
-			 	 </Text>
-         <Image
-					style={{width: 150, height: 150, borderRadius : 75}}
+				 <HeaderDGR pageName={"Login"}/>
+         <Image style={styles.avatar}
+					style={{width: 150, height: 150, borderRadius : 75, marginTop: 20}}
 					source={require('../assets/logo.png')}
 				/>
 
           <Item floatingLabel style = {styles.item}>
-            <Icon name='mail'/> 
-            <Label>Email</Label>
-            <Input/>
+            <Icon style={{color:"rgb(79, 188, 132)"}} name='mail'/>
+            <Label style={{color:"rgb(132, 134, 137)"}}>Email</Label>
+            <Input style={{color:"rgb(132, 134, 137)"}} keyboardType="email-address"/>
           </Item>
 
           <Item floatingLabel style = {styles.item}>
-          <Icon name ='lock'/>
-              <Label>Password</Label>
-              <Input />
-          </Item> 
-  
+          <Icon style={{color:"rgb(79, 188, 132)"}} name ='lock'/>
+              <Label style={{color:"rgb(132, 134, 137)"}}>Password</Label>
+              <Input style={{color:"rgb(132, 134, 137)"}} secureTextEntry={true}/>
+          </Item>
+
         <View>
             <Button style={styles.click}
+              buttonStyle={{marginTop: 30}}
               backgroundColor='rgb(79, 188, 132)'
               title='Sign in' />
 
@@ -39,7 +40,8 @@ class LoginDGR extends React.Component{
              </Text>
 
             <Button style = {styles.click}
-                  backgroundColor='rgb(79, 188, 132)'
+              buttonStyle={{marginTop: 30}}
+              backgroundColor='rgb(79, 188, 132)'
                   title='Create an account' />
           </View>
 
@@ -52,19 +54,22 @@ export default LoginDGR;
 const styles = StyleSheet.create({
   login: {
     flex: 1,
-    // marginTop: 10,
-    padding : 30,
     backgroundColor: 'rgb(240,240,240)',
     alignItems: 'center'
   },
-
+ avatar: {
+	 marginTop: 30
+ },
  item:{
-  marginTop : 10
+  marginTop : 10,
+	marginLeft : 30,
+	marginRight: 30
  },
 
   click : {
     margin : 30,
-    width : 200
+    width : 200,
+    marginTop : 30,
   },
 
   lineStyle:{
@@ -75,7 +80,7 @@ const styles = StyleSheet.create({
 
   signUp : {
     textAlign : 'center',
-    marginTop : 30
+    // marginTop : 30
   },
 	header: {
 			flex: 1,

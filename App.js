@@ -18,7 +18,7 @@ export default class App extends React.Component {
     super(props);
     this.state={test:true};
   }
-  
+
   render() {
     return (
         <RootStack/>
@@ -30,6 +30,7 @@ export default class App extends React.Component {
 const RootStack = createStackNavigator(
     {
       Home: HomeScreen,
+      Login: LoginDGR,
       Details: DetailsScreen,
       ProjectDescription: ProjectDescription,
       ProjectsList: ProjectsList,
@@ -44,7 +45,7 @@ const RootStack = createStackNavigator(
       },
     },
     {
-      initialRouteName: 'Ok',
+      initialRouteName: 'Login',
     }
 );
 

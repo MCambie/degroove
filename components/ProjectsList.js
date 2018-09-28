@@ -2,17 +2,22 @@ import React from 'react';
 import {ScrollView,Text,StyleSheet,View} from 'react-native';
 import ProjectTouchable from './ProjectTouchable';
 import FooterDGR from './Footer';
+import HeaderDGR from './Header';
 class ProjectsList extends React.Component{
+    static navigationOptions={header:null}
 	render(){
 		return(
-            <ScrollView>
-                <Text style={styles.header}>
+            <ScrollView style={{flex:1}}>
+                <HeaderDGR pageName={"Projects list"}/>
+                {/* <Text style={styles.header}>
                     Project List
-                </Text>
+                </Text> */}
                 <ProjectTouchable></ProjectTouchable>
                 <ProjectTouchable></ProjectTouchable>
                 <ProjectTouchable></ProjectTouchable>
+                {/* <View style={{position:"absolute",bottom:0,left:0,right:0}}> */}
                 <FooterDGR style={styles.footer}/>
+                {/* </View> */}
             </ScrollView>
         )
 	}
