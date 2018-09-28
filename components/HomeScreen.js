@@ -1,23 +1,33 @@
 import React from 'react';
-import {View,Text,Image,StyleSheet,Button} from 'react-native';
+import {View,Image,StyleSheet,Text} from 'react-native';
 import { createStackNavigator } from 'react-navigation';
+import { Container, Header, Title, Left, Icon, Right, Button, Body, Content, Card, CardItem } from "native-base";
+import HeaderFictif from './HeaderFictif';
+// import SideBar from './SideBar';
 class HomeScreen extends React.Component {
     render() {
       return (
         <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Home Screen</Text>
-          <Button
-                    title="Details"
-                    onPress={() => this.props.navigation.navigate('Details')}
-                />
+          <Text>Home</Text>
+          {/* <HeaderFictif/> */}
+          {/* <Container>
+            <Header>
+              <Left>
                 <Button
-                    title="List"
-                    onPress={() => this.props.navigation.navigate('ProjectsList')}
-                />
-                <Button
-                    title="Descr"
-                    onPress={() => this.props.navigation.navigate('ProjectDescription')}
-                />
+                  transparent
+                  onPress={() => this.props.navigation.navigate("DrawerOpen")}>
+                  <Icon name="menu" />
+                </Button>
+              </Left>
+              <Body>
+                <Text>HomeScreen</Text>
+              </Body>
+              <Right />
+            </Header>
+            <Content >
+                    <Text>Chat App to talk some awesome people!</Text>
+            </Content>
+        </Container> */}
         </View>
       );
     }

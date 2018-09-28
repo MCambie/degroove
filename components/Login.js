@@ -1,8 +1,8 @@
 import React from 'react';
-import {View,Text, StyleSheet} from 'react-native';
-import {Button, Avatar, FormLabel, FormInput, FormValidationMessage } from 'react-native-elements';
+import {View,Text, StyleSheet, Image} from 'react-native';
+import {Button} from 'react-native-elements';
+import {Input, Label, Item, Icon} from 'native-base';
 import app from './firebaseAuth';
-import base from './firestore';
 import 'firebase/auth';
 
 class LoginDGR extends React.Component{
@@ -35,33 +35,48 @@ class LoginDGR extends React.Component{
 	render(){
 		return(
 			 <View style={styles.login}>
-       <Avatar
-           medium
-           source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/kfriedson/128.jpg"}}
-           onPress={() => console.log("Works!")}
-           activeOpacity={0.7}
-       />
-       <FormLabel style={{fontSize: '50'}} >Login</FormLabel>
-       <FormInput placeholder = "email" onChangeText={(input)=>this.emailinputChange(input)}/>
-       {/* if error display :*/}
-       <FormValidationMessage>{'This field is required'}</FormValidationMessage>
-       <FormLabel>Password </FormLabel>
-       <FormInput onChangeText={(input)=>this.passwordinputChange(input)}/>
-       {/* if error display :*/}
-       <FormValidationMessage>{'This field is required'}</FormValidationMessage>
-       <View style={styles.button}>
-           <Button
-						onPress={()=>this.submitExistingUser()}
-            backgroundColor='rgb(79, 188, 132)'
-            small
-            title='Sign in' />
-           <Button
-            backgroundColor='rgb(79, 188, 132)'
-            small
-            title='Create a new account'
-						onPress={() => this.props.navigation.navigate('Signup')}
+				 <Text style={styles.header}>
+					 Login
+			 	 </Text>
+         <Image
+					style={{width: 150, height: 150, borderRadius : 75}}
+					source={require('../assets/logo.png')}
+				/>
+
+          <Item floatingLabel style = {styles.item}>
+            <Icon name='mail'/>
+            <Label>Email</Label>
+            <Input onChangeText={(input)=>this.emailinputChange(input)}/>
+          </Item>
+
+          <Item floatingLabel style = {styles.item}>
+          <Icon name ='lock'/>
+              <Label>Password</Label>
+              <Input onChangeText={(input)=>this.passwordinputChange(input)}/>
+          </Item>
+
+        <View>
+            <Button
+							style={styles.click}
+							onPress={()=>this.submitExistingUser()}
+              backgroundColor='rgb(79, 188, 132)'
+              title='Sign in'
 						/>
-        </View>
+
+             <View style = {styles.lineStyle} />
+
+             <Text style ={styles.signUp}>
+              You don't have an account ?
+             </Text>
+
+            <Button
+							style = {styles.click}
+							onPress={() => this.props.navigation.navigate('Signup')}
+              backgroundColor='rgb(79, 188, 132)'
+              title='Create an account'
+						/>
+          </View>
+
       </View>
 			)
 	}
@@ -71,18 +86,36 @@ export default LoginDGR;
 const styles = StyleSheet.create({
   login: {
     flex: 1,
-    marginTop: 50,
+    // marginTop: 10,
+    padding : 30,
     backgroundColor: 'rgb(240,240,240)',
     alignItems: 'center'
   },
-  font: {
-    fontSize: 50
-  },
-  button:{
-    flexDirection: 'row',
 
-  },
-  green:{
+ item:{
+  marginTop : 10
+ },
 
-  }
+  click : {
+    margin : 30,
+    width : 200
+  },
+
+  lineStyle:{
+    borderWidth: 0.5,
+    borderColor:'black',
+    margin:10,
+},
+
+  signUp : {
+    textAlign : 'center',
+    marginTop : 30
+  },
+	header: {
+			// flex: 1,
+			width: '100%',
+			backgroundColor: 'rgb(79, 188, 132)',
+			color: 'white'
+			}
+
 });

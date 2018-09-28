@@ -1,11 +1,11 @@
 import React from 'react';
-import {View,Text,Image,StyleSheet,Button} from 'react-native';
-import { Card } from 'react-native-elements'
+import {View,Text,Image,StyleSheet} from 'react-native';
+import { Card, Button } from 'react-native-elements';
 class ProjectDetails extends React.Component{
 	render(){
 		return(
 			 <View style={styles.container}>
-                {/* <Card 
+                {/* <Card
                 // lexDirection="row"
                 containerStyle={{backgroundColor:"pink"}}
                 wrapperStyle={{backgroundColor:"purple"}}
@@ -16,12 +16,12 @@ class ProjectDetails extends React.Component{
                 <Image style={styles.image} source={{uri: 'https://picsum.photos/200/300/?random'}} ></Image>
                 <View style={styles.inside}>
                     <Text style={styles.title}>Project description</Text>
-                    <Text>Name</Text>
-                    <Text>Region</Text>
-                    <Text>Field</Text>
-                    <Text>Type</Text>
-                    <Text>Skills</Text>
-                    <Text>Hours</Text>
+                    <Text>{this.props.name}</Text>
+                    <Text>{this.props.region}</Text>
+                    <Text>{this.props.field}</Text>
+                    <Text>{this.props.type}</Text>
+                    <Text>{this.props.skills}</Text>
+                    <Text>{this.props.hours}</Text>
                 </View>
                 {/* <Button
                     icon={{name: 'code'}}
@@ -66,5 +66,5 @@ const styles = StyleSheet.create({
         alignItems: "center",
     }
 })
-  
+
 export default ProjectDetails;

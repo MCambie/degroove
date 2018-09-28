@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text} from 'react-native';
+import {View,Text,Icon} from 'react-native';
 import {Header} from 'react-native-elements';
 
 class HeaderDGR extends React.Component{
@@ -8,9 +8,8 @@ class HeaderDGR extends React.Component{
 			 <View>
        <Header
          backgroundColor='rgb(79, 188, 132)'
-         leftComponent={{ icon: 'menu', color: '#fff'}}
          centerComponent={{ text: 'DEGROOF', style: { color: '#fff'} }}
-         rightComponent={{ icon: 'home', color: '#fff'}}
+         rightComponent={{ icon: 'exit-to-app', color: '#fff'}}
        />
 			</View>
 			)
