@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "test",
-    "description": "This project is really great.",
-    "slug": "test",
+    "name": "degroof-volunteer-tracking-app",
+    "description": "App to track volunteer work.",
+    "slug": "dpf-app",
     "privacy": "public",
     "sdkVersion": "30.0.0",
     "platforms": ["ios", "android"],
@@ -13,6 +13,9 @@
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "package": "degroof.app.ggtm"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
