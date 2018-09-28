@@ -3,10 +3,10 @@
 - **Where ?** : [BeCode](https://becode.org/)
 - **When ?** : 24/09 - 28/09/2018
 - **Who ?** : 
- - [Guillaume Deruwez](https://github.com/gderuwez) : BackEnd
- - [Thibault Gribaumont](https://github.com/TGribaumont) : BackEnd
- - [Géraldine Winand](https://github.com/Geraldinew04) : FrontEnd 
- - [Marie Cambie](https://github.com/MCambie) : FrontEnd
+  - [Guillaume Deruwez](https://github.com/gderuwez) : BackEnd
+  - [Thibault Gribaumont](https://github.com/TGribaumont) : BackEnd
+  - [Géraldine Winand](https://github.com/Geraldinew04) : FrontEnd 
+  - [Marie Cambie](https://github.com/MCambie) : FrontEnd
 - **The app** : 
 
 ## Client needs : 
