@@ -52,4 +52,4 @@ Some printscreens :
 
 ## Our difficulties :
 - Coding in a very new language, we only had one day to get familiar with react-native before the challenge.
-- The time was dinitely our ennemy, we made this app in only 3 and half days.
+- The time was dinitely our ennemy, we made this app in only 3 days and half.
