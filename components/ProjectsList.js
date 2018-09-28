@@ -3,11 +3,12 @@ import {ScrollView,Text,StyleSheet,View, Button} from 'react-native';
 import ProjectTouchable from './ProjectTouchable';
 import FooterDGR from './Footer';
 import app from './firebaseAuth';
+import HeaderDGR from './Header';
 import 'firebase/auth';
 import base from './firestore';
 
-class ProjectList extends React.Component{
-
+class ProjectsList extends React.Component{
+static navigationOptions={header:null}
 	constructor(props) {
     super(props);
     this.state = {
@@ -27,10 +28,6 @@ class ProjectList extends React.Component{
       this.setState({projects: value});
     }.bind(this));
   }
-
-	testfunction2(){
-		app.auth().signOut()
-	}
 
 	render(){
 		const projectFilter = this.state.projects.filter((searchText) => {
@@ -53,26 +50,26 @@ class ProjectList extends React.Component{
       )
     });
 		return(
-			 <ScrollView>
-                <Text style={styles.header}>
-                    Project List
-                </Text>
-								<Button title="logout" onPress={()=>this.testfunction2()}/>
+			 <ScrollView style={{flex: 1}}>
+              <HeaderDGR pageName={"Projects List"}  />
                 {projectTest}
-                <FooterDGR/>
+                <FooterDGR navigation= {this.props.navigation} style={styles.footer}/>
 			</ScrollView>
 			)
 	}
 }
 
 const styles = StyleSheet.create({
-    container: {
-    //   flex: 1,
-    //   backgroundColor: 'blue',
-    //   alignItems: 'center',
-    //   justifyContent: 'center',
-	},
-
+    header: {
+        // flex: 1,
+        width: '100%',
+        backgroundColor: 'rgb(79, 188, 132)',
+        color: 'white'
+    },
+    footer: {
+        position: "absolute",
+        bottom: 0,
+    }
 })
 
-export default ProjectDescription;
+export default ProjectsList;

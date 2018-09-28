@@ -1,8 +1,15 @@
 import React from 'react';
 import {View,Text,Image,StyleSheet,ScrollView,TouchableOpacity,Icon} from 'react-native';
 import {Button} from 'react-native-elements';
+import app from './firebaseAuth';
+import 'firebase/auth';
 class HeaderDGR extends React.Component{
 	static navigationOptions={header:null}
+
+	testfunction2(){
+		app.auth().signOut()
+	}
+
 	render(){
 		return(
 			<View style={styles.header}>
@@ -16,6 +23,7 @@ class HeaderDGR extends React.Component{
 				<Button style={styles.exit}
 					icon={{name: 'input', size: 25}}
 					backgroundColor= 'rgb(79, 188, 132)'
+					onPress = {()=>this.testfunction2()}
 				>
 			</Button>
 			</View>

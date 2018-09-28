@@ -7,14 +7,13 @@ class FooterDGR extends React.Component{
 	static navigationOptions={header:null}
 	render(){
 		return(
-      <Container style={styles.container}>
               <Footer >
                 <FooterTab style={styles.footer}>
-                  <Button vertical title='Profil' style={styles.button}
+                  <Button vertical title='Profile' style={styles.button}
                   backgroundColor='rgb(79, 188, 132)'
                   underlayColor="black"
                   icon={{name: 'person'}}
-                  onPress={() => this.props.navigation.navigate('SignUp')}
+                  onPress={() => this.props.navigation.navigate('Signup')}
                   >
                   </Button>
                   <Text style={styles.text}></Text>
@@ -26,16 +25,12 @@ class FooterDGR extends React.Component{
                   </Button>
                 </FooterTab>
               </Footer>
-            </Container>
 			)
 	}
 }
 export default FooterDGR;
 
 const styles = StyleSheet.create({
-      container: {
-        justifyContent: 'flex-end'
-      },
       footer :{
         backgroundColor: 'rgb(79, 188, 132)',
         alignItems: 'center',

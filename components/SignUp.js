@@ -1,15 +1,17 @@
 import React from 'react';
-import {View,Text,Image, StyleSheet, TouchableOpacity} from 'react-native';
+import {ScrollView, View,Text,Image, StyleSheet, TouchableOpacity} from 'react-native';
 import {Card, SearchBar, Button, CheckBox} from 'react-native-elements'
 import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import {Input, Label, Form, Item, ListItem, Body, Icon} from 'native-base';
 import ProjectDetails from './ProjectDetails';
 import HeaderFictif from './HeaderFictif';
+import HeaderDGR from './Header';
 import app from './firebaseAuth';
 import base from './firestore';
 import 'firebase/auth';
 
 class SignUp extends React.Component{
+  static navigationOptions={header:null}
     constructor(props){
         super(props);
         this.state={
@@ -72,57 +74,67 @@ class SignUp extends React.Component{
 	render(){
 		return(
             <ScrollView style = {styles.container}>
+              <HeaderDGR pageName={"Profile"} />
                 <View style = {styles.image}>
                     <Image
-                        style={{width: 150, height: 150, borderRadius : 75}}
+                        style={{width: 150, height: 150, borderRadius : 75, marginTop: 20}}
                         source={require('../assets/logo.png')}
                     />
                     <Text style={styles.title}>
                         Change profile picture
 
                     </Text>
+
+                    <View style = {styles.profile}>
+                        <Icon style={{color:"rgb(79, 188, 132)",flex:1,textAlign:"center"}} name ='camera'/>
+                        <Icon style={{color:"rgb(79, 188, 132)",flex:1,textAlign:"center"}} name ='image'/>
+                    </View>
                 </View>
 
 
-                <View style = {styles.form}>
-                    <Form>
+                <View>
+                  <Text style={styles.required}>
+                        Please complete all the fields below.
+                    </Text>
+                    <Form style={{padding: 30}}>
                         <Item floatingLabel>
-                        <Icon name ='person'/>
-                            <Label >
+                        <Icon style={{color:"rgb(79, 188, 132)"}} name ='person'/>
+                            <Label style={{color:"rgb(132, 134, 137)"}}>
                             First Name</Label>
-                            <Input />
+                            <Input style={{color:"rgb(132, 134, 137)"}}/>
                         </Item>
 
                         <Item floatingLabel>
-                        <Icon name ='person'/>
-                            <Label>
+                        <Icon style={{color:"rgb(79, 188, 132)"}} name ='person'/>
+                            <Label style={{color:"rgb(132, 134, 137)"}}>
                             Last Name</Label>
-                            <Input />
+                            <Input style={{color:"rgb(132, 134, 137)"}}/>
                         </Item>
 
                         <Item floatingLabel>
-                          <Icon name='mail'/>
-                          <Label>Email</Label>
-                          <Input onChangeText={(input)=>this.emailinputChange(input)}/>
+                          <Icon style={{color:"rgb(79, 188, 132)"}} name='mail'/>
+                          <Label style={{color:"rgb(132, 134, 137)"}}>Email</Label>
+                          <Input style={{color:"rgb(132, 134, 137)"}} onChangeText={(input)=>this.emailinputChange(input)}/>
                         </Item>
 
                         <Item floatingLabel>
-                        <Icon name ='lock'/>
-                            <Label>Password</Label>
-                            <Input onChangeText={(input)=>this.passwordinputChange(input)}/>
+                        <Icon style={{color:"rgb(79, 188, 132)"}} name ='lock'/>
+                            <Label style={{color:"rgb(132, 134, 137)"}}>Password</Label>
+                            <Input style={{color:"rgb(132, 134, 137)"}} onChangeText={(input)=>this.passwordinputChange(input)}/>
                         </Item>
 
                         <Item style = {styles.region}>
-                        <Icon name ='paper-plane'/>
-                            <Label>Region</Label>
+                        <Icon style={{color:"rgb(79, 188, 132)"}} name ='paper-plane'/>
+                            <Label style={{color:"rgb(132, 134, 137)"}}>Region</Label>
                         </Item>
                         <Collapse isCollapsed = {this.state.collapsed}>
                             <CollapseHeader>
                                 <View>
                                     <Button
-                                        title= "Click"
-                                        backgroundColor = 'white'
-                                        color = 'rgb(79, 188, 132)'
+                                      title= "Click and select your working area"
+                                      backgroundColor = 'rgb(240,240,240)'
+                                      color = 'rgb(79, 188, 132)'
+                                      buttonStyle={{marginTop: 10,borderColor : 'rgb(79, 188, 132)'}}
                                         onPress = {() => this.setState({collapsed:!this.state.collapsed})}
                                     />
                                 </View>
@@ -186,14 +198,14 @@ class SignUp extends React.Component{
                                 />
                             </CollapseBody>
                         </Collapse>
-                    </Form>
+
 
                     <Item style = {styles.search}>
-                      <Icon name="search" />
-                      <Input placeholder="Skills" onChangeText={(input)=>this.skillinputChange(input)} />
-                      <Icon name="people" />
+                      <Icon style={{color:"rgb(79, 188, 132)"}} name="search" />
+                      <Input style={{color:"rgb(132, 134, 137)"}} placeholder="Enter your Skills" onChangeText={(input)=>this.skillinputChange(input)} />
+                      <Icon style={{color:"rgb(79, 188, 132)"}} name="people" />
                     </Item>
-
+                    </Form>
                     <View style = {styles.button}>
                         <Button
                         title='Create an account'
@@ -216,15 +228,33 @@ class SignUp extends React.Component{
 const styles = StyleSheet.create({
     container :{
         flex : 1,
-        padding : 30,
+        // padding : 30,
+        backgroundColor: "#fff",
+        // alignItems: 'center'
     },
-
     image: {
         alignItems: 'center'
     },
 
     title : {
-       fontSize : 20,
+        fontSize : 20,
+        marginTop: 10,
+        color:"rgb(132, 134, 137)",
+     },
+
+     required : {
+        fontStyle : "italic",
+        marginTop: 30,
+        color:"rgb(132, 134, 137)",
+        textAlign: "center",
+        marginBottom: -30,
+     },
+
+      profile : {
+        // flex : 1,
+        flexDirection : "row",
+        marginTop: 10,
+        // justifyContent : "flex-end",
     },
 
     region:{
@@ -236,7 +266,9 @@ const styles = StyleSheet.create({
     },
 
     button :{
-        alignItems : 'center'
+        alignItems : 'center',
+        marginBottom : 60,
+        marginTop : 30,
     }
 
 })

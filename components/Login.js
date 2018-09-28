@@ -6,8 +6,10 @@ import HeaderDGR from './Header';
 import app from './firebaseAuth';
 import 'firebase/auth';
 
+
 class LoginDGR extends React.Component{
 
+	static navigationOptions={header:null}
 	constructor(props) {
     super(props);
     this.state = {
@@ -71,6 +73,7 @@ class LoginDGR extends React.Component{
 
             <Button
 							style = {styles.click}
+							buttonStyle={{marginTop: 30}}
 							onPress={() => this.props.navigation.navigate('Signup')}
               backgroundColor='rgb(79, 188, 132)'
               title='Create an account'
@@ -90,17 +93,18 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
  avatar: {
-	 marginTop: 10
+     marginTop: 30
  },
  item:{
   marginTop : 10,
-	marginLeft : 30,
-	marginRight: 30
+    marginLeft : 30,
+    marginRight: 30
  },
 
   click : {
     margin : 30,
-    width : 200
+    width : 200,
+    marginTop : 30,
   },
 
   lineStyle:{
@@ -111,13 +115,13 @@ const styles = StyleSheet.create({
 
   signUp : {
     textAlign : 'center',
-    marginTop : 30
+    // marginTop : 30
   },
-	header: {
-			flex: 1,
-			width: '100%',
-			backgroundColor: 'rgb(79, 188, 132)',
-			color: 'white'
-			}
+    header: {
+            flex: 1,
+            width: '100%',
+            backgroundColor: 'rgb(79, 188, 132)',
+            color: 'white'
+            }
 
 });
