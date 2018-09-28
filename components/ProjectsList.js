@@ -3,19 +3,14 @@ import {View,Text,Image,StyleSheet,Button,ScrollView,TouchableOpacity} from 'rea
 import { Card } from 'react-native-elements'
 import ProjectDetails from './ProjectDetails';
 import FooterDGR from './Footer';
+import HeaderDGR from './Header';
 class ProjectDescription extends React.Component{
+	static navigationOptions={header:null}
 	render(){
 		return(
-			 <View>
-				 				<View style={styles.header}>
-									<Text style={styles.title} >
-										Project List
-									</Text>
-									<Button style={styles.exit}
-									icon={{name: 'input'}}
-									backgroundColor= 'rgb(79, 188, 132)'
-									/>
-								</View>
+			 <ScrollView>
+				 				<HeaderDGR pageName={"Projects List"}/>
+								 <TouchableOpacity onPress={() => this.props.navigation.navigate('ProjectDescription', {itemId: 1})}>
                 <ProjectDetails style={styles.container}></ProjectDetails>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('ProjectDescription', {itemId: 2})}>
@@ -36,7 +31,7 @@ class ProjectDescription extends React.Component{
                     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
                     title='VIEW NOW' /> */}
 										<FooterDGR/>
-			</View>
+			</ScrollView>
 			)
 	}
 }
@@ -48,22 +43,7 @@ const styles = StyleSheet.create({
     //   alignItems: 'center',
     //   justifyContent: 'center',
 	},
-		header: {
-				flex: 1,
 
-				backgroundColor: 'rgb(79, 188, 132)',
-				alignItems: 'center',
-				justifyContent: 'space-between',
-				flexDirection:'row'
-			},
-		title: {
-			marginLeft: 10,
-				color: 'white',
-		},
-		exit: {
-				color: 'white',
-				justifyContent: 'flex-end'
-				}
 })
 
 export default ProjectDescription;

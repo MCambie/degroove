@@ -2,6 +2,7 @@ import React from 'react';
 import {View,Text,Image,StyleSheet} from 'react-native';
 import { Card, Button } from 'react-native-elements';
 class ProjectDetails extends React.Component{
+	static navigationOptions={header:null}
 	render(){
 		return(
 			 <View style={styles.container}>

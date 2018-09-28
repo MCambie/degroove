@@ -3,18 +3,13 @@ import {View,Text,Image, StyleSheet} from 'react-native';
 import { Card, Button } from 'react-native-elements'
 import ProjectDetails from './ProjectDetails';
 import FooterDGR from './Footer';
+import HeaderDGR from './Header';
 class ProjectDescription extends React.Component{
+	static navigationOptions={header:null}
 	render(){
 		return(
 			 <View>
-								 <View style={styles.header}>
-									 <Text>
-										 Project List
-									 </Text>
-									 <Button
-									 icon={{name: 'exit_to_app'}}
-									 />
-								 </View>
+				 				<HeaderDGR pageName={"Project Description"}/>
                 <ProjectDetails></ProjectDetails>
                 <Text style={{marginBottom: 10}}>
                     Mission description.

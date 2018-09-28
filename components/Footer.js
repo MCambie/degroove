@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import { Container, Footer, FooterTab, Icon } from 'native-base';
 
 class FooterDGR extends React.Component{
+	static navigationOptions={header:null}
 	render(){
 		return(
       <Container style={styles.container}>
